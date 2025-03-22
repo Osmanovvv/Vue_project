@@ -7,16 +7,22 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn text>Link One</v-btn>
-        <v-btn text>Link Two</v-btn>
-        <v-btn text>Link Three</v-btn>
+        <v-btn>
+          <v-icon start icon="mdi-cake-variant"></v-icon>
+          Link One
+        </v-btn>
+
+        <v-btn>Link Two</v-btn>
+        <v-btn>Link Three</v-btn>
       </v-toolbar-items>
     </v-app-bar>
 
     <v-main>
+      <!-- Content goes here -->
     </v-main>
   </v-app>
 </template>
+
 
 
 <script>
