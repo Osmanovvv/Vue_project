@@ -1,7 +1,7 @@
 <template>
   <v-container>
     <v-row justify="center">
-      <h1>About</h1>
+      <h1>NewAd</h1>
     </v-row>
   </v-container>
 </template>
