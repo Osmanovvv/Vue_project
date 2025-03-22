@@ -8,7 +8,7 @@
           </v-toolbar>
 
           <v-card-text>
-            <v-form v-model="valid" ref="form">
+            <v-form v-model="valid" ref="form" validation>
               <v-text-field
                 prepend-icon="mdi-account"
                 name="email"
@@ -31,7 +31,13 @@
 
           <v-card-actions>
             <v-spacer></v-spacer>
-            <v-btn color="primary">Login</v-btn>
+            <v-btn
+              color="primary"
+              @click="onSubmit"
+              :disabled="!valid"
+            >
+              Login
+            </v-btn>
           </v-card-actions>
         </v-card>
       </v-col>
@@ -52,9 +58,20 @@ export default {
       ],
       passwordRules: [
         (v) => !!v || "Password is required",
-        (v) => (v && v.length >= 6) || "Password must be at least 6 characters",
+        (v) => (v && v.length >= 6) || "Password must be more or equal than 6 characters",
       ],
     };
+  },
+  methods: {
+    onSubmit() {
+      if (this.$refs.form.validate()) {
+        const user = {
+          email: this.email,
+          password: this.password,
+        };
+        console.log(user);
+      }
+    },
   },
 };
 </script>
