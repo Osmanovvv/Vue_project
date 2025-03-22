@@ -15,7 +15,11 @@
       <v-divider></v-divider>
 
       <v-list dense>
-        <v-list-item v-for="link in links" :key="link.title">
+        <v-list-item
+          v-for="link in links"
+          :key="link.title"
+          :to="link.url"
+        >
           <template v-slot:prepend>
             <v-icon :icon="link.icon"></v-icon>
           </template>
@@ -29,7 +33,11 @@
       <v-spacer></v-spacer>
 
       <v-toolbar-items class="hidden-sm-and-down">
-        <v-btn text v-for="link in links" :key="link.title">
+        <v-btn
+          v-for="link in links"
+          :key="link.title"
+          :to="link.url"
+        >
           <v-icon start :icon="link.icon"></v-icon>
           {{ link.title }}
         </v-btn>
