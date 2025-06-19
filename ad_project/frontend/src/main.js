@@ -9,8 +9,8 @@ import BuyAdModal from './views/Shared/BuyAdModal.vue'
 loadFonts()
 
 createApp(App)
-  .use(router)
-  .use(store)
-  .use(vuetify)
-  .component("buy-ad-modal",BuyAdModal)
-  .mount('#app')
+	.use(router)
+	.use(store)
+	.use(vuetify)
+	.component("buy-ad-modal", BuyAdModal)
+	.mount('#app')
